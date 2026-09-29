@@ -1,13 +1,13 @@
 import Contact from "@/components/sections/contact/Contact";
 import Features from "@/components/sections/features/Features";
-import Home from "@/components/sections/home/Home";
+import Hero from "@/components/sections/Hero/Hero";
 import Portfolio from "@/components/sections/Portfolio/Portfolio";
 import Resume from "@/components/sections/resume/Resume";
 
 const page = () => {
   return (
     <div className="">
-      <Home />
+      <Hero />
       <Features />
       <Portfolio />
       <Resume />
