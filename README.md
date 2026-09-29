@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ahmed — Personal Portfolio
+
+My personal portfolio site, built to showcase my projects and skills as a
+Full-Stack Developer.
+
+**Live Demo:** [add your deployed link here]
+
+<!-- Add a screenshot or GIF of the hero section here once the site is deployed -->
+<!-- ![Portfolio preview](./public/preview.png) -->
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS v4 (CSS-first `@theme` config)
+- **Animation:** Framer Motion
+- **Carousel:** Swiper
+- **Icons:** react-icons
+
+## Features
+
+- **Animated Hero** — typewriter-style rotating job titles, measured
+  dynamically so it works correctly at any screen size.
+- **Skills / What I Do** — a Swiper carousel of real, buildable features
+  (role-based access, real-time sync, relational data modeling, social auth,
+  API security, SSR), each entering with a scroll-triggered animation.
+- **Projects** — a filterable-ready grid of real projects, each opening a
+  detail modal with a screenshot gallery, tech tags, and links to the live
+  demo and source code.
+- **Skills section** — a responsive grid of core skills and tools.
+- **Contact** — a contact form plus a direct WhatsApp click-to-chat link.
+- **Responsive navigation** — a slide-in mobile drawer, built with Framer
+  Motion and a React portal.
+- **Scroll-snap sections** — each section takes up the full viewport height
+  and snaps into place on scroll.
+- Every section animates in (fade + slide up, staggered) the first time it
+  scrolls into view.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# install dependencies
+npm install
+
+# run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  page.tsx              # assembles all sections
+components/
+  layout/
+    Navbar.tsx
+    Footer.tsx
+    header.tsx
+  sections/
+    Hero/
+        LeftComponents.tsx  # animated intro + job title rotator
+    Features/
+        Features.tsx
+        FeaturesGrid.tsx    # Swiper carousel
+    Portfolio/
+        Portfolio.tsx
+        ProjectsGrid.tsx
+        ProjectCard.tsx
+        ProjectModal.tsx
+    Resume/
+        Resume.tsx
+        ResumeCards.tsx
+        ResumeCard.tsx
+    Contact/
+        Contact.tsx
+        ContactCardInfo.tsx
+        ContactForm.tsx
+types.ts                     # Project, Skill, and other shared types
+```
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
+- The contact form is currently UI-only. Sending messages by email is
+  planned to be wired up through [Resend](https://resend.com).
+- Project data lives in `types/index.ts` — update it as new projects are
+  finished or as project status changes from "in-progress" to "completed".
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Ahmed**
+Full-Stack Developer — [LinkedIn](https://www.linkedin.com/in/ahmed-ibrahiem-1796b7328/) · [GitHub](#)

@@ -1,26 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  --color-gradient-red: linear-gradient(145deg, #6a67ce, #fc636b);
+
+
+  --radius-card: 20px;
+  --radius-button: 12px;
+  --radius-pill: 999px;
+
+  --font-sans: 'Poppins', 'Inter', sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ===== Colors ===== */
+  --color-page: #EEF1F4;
+  --color-card: #FFFFFF;
+
+  --color-accent: #ff014f;
+  --color-accent-dark: #D6285C;
+
+  --color-heading: #1E2128;
+  --color-dark-lite: #3c3e41;
+  --color-body: #6B7280;
+  --color-muted: #9CA3AF;
+
+  --color-border: #E5E7EB;
+
+  /* ===== Gradient stops (كارت App Development) ===== */
+  --background-image-progress-bar: linear-gradient(145deg, #fff 0%, #ff014f 100%);
+  --color-gradient-via: #E0299B;
+  --color-gradient-to: #F0466E;
+  --color-gradient-red: var(--color-gradient-red);
+  --background-image-box-style: linear-gradient(145deg, rgb(202, 209, 223), #ffffff);
+  --background-image-card-style: linear-gradient(145deg, rgba(202, 209, 223, 0.6), #ffffff);
+  --background-image-red-hover: linear-gradient(145deg, #6a67ce, #fc636b);
+
+
+  /* ===== Shadows ===== */
+  --shadow-card: 6px 6px 20px 5px rgba(209, 217, 230, 0.8), -6px -6px 20px 10px rgba(255, 255, 255, 0.5);
+  --shadow-card-hover: 0 15px 40px rgba(17, 17, 17, 0.1);
+  --shadow-button: 0 8px 20px rgba(238, 63, 115, 0.25);
+  --shadow-box: 6px 6px 15px 2px rgba(209, 217, 230, 0.8),
+    -6px -6px 15px 5px rgba(255, 255, 255, 1);
+
+
+  /* ===== Radius ===== */
+  --radius-card: 20px;
+  --radius-button: 12px;
+  --radius-pill: 999px;
+
+  /* ===== Fonts ===== */
+  --font-sans: 'Poppins', 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .container {
+    @apply px-5 sm:px-10 max-w-350
+  }
+
+  .flex-start {
+    @apply flex items-center justify-start
+  }
+
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between
+  }
+
+  .flex-start-col {
+    @apply flex items-start justify-start flex-col
+  }
+
+  .flex-center-col {
+    @apply flex items-center justify-center flex-col
+  }
+
+  .job-title-animate {
+    animation: job-title-animate 3s linear both;
+  }
+
+}
+
+@keyframes job-title-animate {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 500px;
+  }
+
+  100% {
+    width: 0%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+* {
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }
