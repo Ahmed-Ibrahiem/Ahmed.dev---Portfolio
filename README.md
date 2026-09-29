@@ -15,6 +15,9 @@ Full-Stack Developer.
 - **Animation:** Framer Motion
 - **Carousel:** Swiper
 - **Icons:** react-icons
+- **Forms & Validation:** React Hook Form + Zod
+- **Email:** Resend
+- **Notifications:** React Toastify
 
 ## Features
 
@@ -46,6 +49,21 @@ npm run dev
 ```
 
 Open [ahmed-dev-portfolio-three.vercel.app](https://ahmed-dev-portfolio-three.vercel.app/) to view it.
+
+## Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+CONTACT_TO_EMAIL=the_email_that_receives_messages
+```
+
+- `CONTACT_TO_EMAIL` must be the email address of your Resend account
+  until you verify a custom domain.
+- Restart the dev server after changing env values.
+- On Vercel, add the same variables under
+  **Project Settings → Environment Variables**, then redeploy.
 
 ## Project Structure
 
@@ -81,12 +99,14 @@ types.ts                     # Project, Skill, and other shared types
 
 ## Notes
 
-- The contact form is currently UI-only. Sending messages by email is
-  planned to be wired up through [Resend](https://resend.com).
+- The contact form uses the Resend test sender (`onboarding@resend.dev`),
+  so messages are delivered only to the account owner's email. That is
+  enough for a portfolio inbox. To send from a custom address, verify a
+  domain in Resend and update the `from` field in `app/api/contact/route.ts`.
 - Project data lives in `types/index.ts` — update it as new projects are
   finished or as project status changes from "in-progress" to "completed".
 
 ## Author
 
 **Ahmed**
-Full-Stack Developer — [LinkedIn](https://www.linkedin.com/in/ahmed-ibrahiem-1796b7328/) · [GitHub](#)
+Full-Stack Developer — [LinkedIn](https://www.linkedin.com/in/ahmed-ibrahiem-1796b7328/) · [GitHub](https://github.com/Ahmed-Ibrahiem)

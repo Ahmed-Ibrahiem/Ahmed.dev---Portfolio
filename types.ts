@@ -111,7 +111,7 @@ export const projects: Project[] = [
     projectType: "SaaS",
     description:
       "A case and deadline tracker for lawyers — clients, cases, hearings, and automatic email reminders before every hearing date.",
-    image: "/projects/wakeel.png",
+    image: "/images/wakeel/wakeel.png",
     tags: ["Next.js", "Neon", "Drizzle", "NextAuth", "Tailwind", "Zod"],
     githubUrl: "#",
     status: "in-progress",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
           text: "Hearing-time conflict detection handled in application code inside Server Actions.",
         },
       ],
-      gallery: [{ src: "/projects/wakeel.png", caption: "Landing page" }],
+      gallery: [{ src: "/images/wakeel/wakeel.png", caption: "Landing page" }],
     },
   },
 ];
