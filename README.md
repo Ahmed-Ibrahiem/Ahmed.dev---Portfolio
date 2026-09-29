@@ -45,7 +45,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it.
+Open [ahmed-dev-portfolio-three.vercel.app](https://ahmed-dev-portfolio-three.vercel.app/) to view it.
 
 ## Project Structure
 
